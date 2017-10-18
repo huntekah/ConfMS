@@ -7,6 +7,11 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index_bundle.js',
     },
+	module: {
+		rules: [
+			{ test: /\.(js|jsx)$/, use: 'babel-loader', exclude: path.resolve(__dirname, 'node_modules') }
+			]
+	},
     plugins: [
         new HtmlWebpackPlugin({template: './src/index.html'})
     ]
