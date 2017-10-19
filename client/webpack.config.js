@@ -7,11 +7,26 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index_bundle.js',
     },
-	module: {
-		rules: [
-			{ test: /\.(js|jsx)$/, use: 'babel-loader', exclude: path.resolve(__dirname, 'node_modules') }
-			]
-	},
+    module: {
+        rules: [
+            {
+                test: /\.(js|jsx)$/,
+                exclude: path.resolve(__dirname, 'node_modules'),
+                use: {
+                    loader: 'babel-loader',
+                    query: {
+                        "presets": [
+                            "env", "react"
+                        ]
+                    }
+                },
+            },
+            {
+                test: /\.json$/,
+                use: 'json-loader'
+            },
+        ]
+    },
     plugins: [
         new HtmlWebpackPlugin({template: './src/index.html'})
     ]
