@@ -14,3 +14,7 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('/v1/hello', function () use ($router) {
+        return response()->json(['message' => 'hello world']);
+});
