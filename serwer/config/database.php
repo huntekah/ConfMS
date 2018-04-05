@@ -15,4 +15,4 @@
         ],
         'migrations' => 'migrations'
     ];
-?>
+    ?>

@@ -1,0 +1,12 @@
+{
+  "desc": "change Conference status",
+  "security": [],
+  "protected": false,
+  "status": "",
+  "response": {
+    "statusCode": 201,
+    "schema": {
+      "type": "application/json"
+    }
+  }
+}

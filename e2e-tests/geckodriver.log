@@ -1,0 +1,4 @@
+1514644523551	geckodriver	INFO	Listening on 127.0.0.1:59587
+1514644524673	geckodriver::marionette	INFO	Starting browser /usr/lib/firefox/firefox.sh with args ["-marionette"]
+1514644535398	Marionette	INFO	Enabled via --marionette
+[Child 21282, Chrome_ChildThread] WARNING: pipe error (31): Connection reset by peer: file /build/firefox-JSAO4L/firefox-57.0.3+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353

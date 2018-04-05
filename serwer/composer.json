@@ -8,7 +8,11 @@
         "php": ">=5.6.4",
         "laravel/lumen-framework": "5.5.*",
         "vlucas/phpdotenv": "~2.2",
-        "jenssegers/mongodb": "^3.3.0-alpha"
+        "jenssegers/mongodb": "^3.3",
+        "alcaeus/mongo-php-adapter": "^1.1",
+	"symfony/event-dispatcher": "^3.4",
+        "tymon/jwt-auth": "^1.0@dev",
+        "illuminate/mail": "@dev"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

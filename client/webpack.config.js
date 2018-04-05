@@ -5,7 +5,14 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'index_bundle.js',
+        publicPath: "/",
+        filename: 'index_bundle.js'
+    },
+    resolve: {
+        modules: [
+            'src',
+            'node_modules'
+        ]
     },
     module: {
         rules: [
@@ -17,6 +24,10 @@ module.exports = {
                     query: {
                         "presets": [
                             "env", "react"
+                        ],
+                        "plugins": [
+                            "transform-decorators-legacy",
+                            "transform-class-properties"
                         ]
                     }
                 },
@@ -25,6 +36,14 @@ module.exports = {
                 test: /\.json$/,
                 use: 'json-loader'
             },
+            {
+                test: /\.(png|jpg|gif)$/,
+                use: 'file-loader'
+            },
+            {
+                test: /\.css$/,
+                loader: ['style-loader', 'css-loader']
+            }
         ]
     },
     plugins: [

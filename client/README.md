@@ -1,15 +1,14 @@
 # ConfMS webclient
 ## Requirements
 1. nodeJs
-2. yarn
-## Build
-Install dependencies:
+2. yarn (optional)
+## Install dependencies:
 ```
 yarn install
 ```
-Build dist:
+or
 ```
-yarn run build
+npm install
 ```
 ## Development
 To start development server (serving static content)
@@ -18,6 +17,11 @@ To start development server (serving static content)
 ```
 yarn run start
 ```
+or
+```
+npm run start
+```
+
 ## Mock API server
 To start mock API server run:
 ```
@@ -25,3 +29,13 @@ node mock/index.js
 ```
 It will start by default on port 8080
 You can access it's UI using address localhost:8080
+
+## Build
+Build dist:
+```
+yarn run build
+```
+or
+```
+npm run build
+```

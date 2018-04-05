@@ -23,9 +23,7 @@ $app = new Laravel\Lumen\Application(
     realpath(__DIR__.'/../')
 );
 
-// $app->withFacades();
-
-// $app->withEloquent();
+$app->withFacades();
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +35,7 @@ $app = new Laravel\Lumen\Application(
 | your own bindings here if you like or you can make another file.
 |
 */
+
 
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
@@ -60,12 +59,14 @@ $app->singleton(
 */
 
 // $app->middleware([
-//    App\Http\Middleware\ExampleMiddleware::class
 // ]);
 
-// $app->routeMiddleware([
-//     'auth' => App\Http\Middleware\Authenticate::class,
-// ]);
+$app->routeMiddleware([
+    'Organizer' => App\Http\Middleware\CheckingOrganizerRole::class,
+     'JWTauth' => App\Http\Middleware\CustomJWTAuthenticate::class
+
+]);
+
 
 /*
 |--------------------------------------------------------------------------
@@ -78,12 +79,14 @@ $app->singleton(
 |
 */
 
-
 $app->register(Jenssegers\Mongodb\MongodbServiceProvider::class);
-
+$app->register(Tymon\JWTAuth\Providers\LumenServiceProvider::class);
 $app->withEloquent();
 
 // $app->register(App\Providers\AppServiceProvider::class);
+$app->register(App\Providers\AuthServiceProvider::class);
+$app->register(App\Providers\AppServiceProvider::class);
+$app->configure('mail');
 // $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
 
@@ -97,7 +100,7 @@ $app->withEloquent();
 | can respond to, as well as the controllers that may handle them.
 |
 */
-
+//$app->register(\Illuminate\Mail\MailServiceProvider::class);
 
 
 $app->router->group([

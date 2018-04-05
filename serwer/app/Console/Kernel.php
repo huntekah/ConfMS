@@ -12,6 +12,11 @@ class Kernel extends ConsoleKernel
      *
      * @var array
      */
+
+    protected $routeMiddleware = [
+        'jwt.auth' => 'Tymon\JWTAuth\Middleware\GetUserFromToken',
+        'jwt.refresh' => 'Tymon\JWTAuth\Middleware\RefreshToken',
+    ];
     protected $commands = [
         //
     ];

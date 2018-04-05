@@ -1,0 +1,36 @@
+[
+{
+	"id": "1",
+	"title": "Mr",
+       "name": "Łanpejcz",
+      "surname": "Multipejcz",
+       "affiliation": "Poznan University of Technology",
+       "email": "example@gmail.com",
+       "address": "someAddress",
+       "phoneNumber": "+48123456789",
+		"state" : "accepted"
+},
+{
+"id": "2",
+	"title": "Mr",
+       "name": "Łanpejcz 2",
+      "surname": "Multipejcz 2",
+       "affiliation": "Poznan University of Technology",
+       "email": "example@gmail.com",
+       "address": "someAddress",
+       "phoneNumber": "+48123456789",
+		"state" : "pending"
+},
+{
+"id": "3",
+	"title": "Mr",
+       "name": "Łanpejcz 2",
+      "surname": "Multipejcz 2",
+       "affiliation": "Poznan University of Technology",
+       "email": "example3@gmail.com",
+       "address": "someAddress",
+       "phoneNumber": "+48123456789",
+		"state" : "declined"
+}
+]
+

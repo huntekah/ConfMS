@@ -36,3 +36,15 @@ If You want to enable nginx on system startup:
 ```
 $ systemctl enable nginx
 ```
+
+### Troubleshooting
+
+If there is something runningon port 80, you can kill it with
+```
+$  sudo fuser -k 80/tcp
+```
+
+and to check if server is active, you can type
+```
+$ systemctl status nginx.service
+```

@@ -1,4 +1,5 @@
 {
+    "basePath": "http://dev.confms.com",
     "devServer": {
         "port": 8081
     }

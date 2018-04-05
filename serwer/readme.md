@@ -1,21 +1,42 @@
-# Lumen PHP Framework
+# ConfMS server 
+## Requirements
+1. php
+2. composer
+3. mongodb
+4. memcache, memcache-php 
+## Build
+Install dependencies:
+```
+composer install
+```
+or
+```
+php composer.phar install
+```
+in case there are problems, try ignoring scripts and platform reqs:
+```
+composer install --no-scripts --ignore-platform-reqs
+```
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+Run migrations:
+```
+php artisan migrate
+```
+## Development
+Run mongo.
+```
+service mongod start
+```
 
-## Official Documentation
+To start development server
+Run: 
+```
+php -S localhost:8000 -t public
+```
+You can access it's UI using address localhost:8000o
 
-Documentation for the framework can be found on the [Lumen website](http://lumen.laravel.com/docs).
+## Troubleshooting
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Lumen framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+If composer can't install jessengers/mongodb:
+install mcrypt and php-mcrypt
